@@ -1,0 +1,30 @@
+{
+  "id": "tokaroo",
+  "name": "@tokaroo-ai/openclaw-provider",
+  "version": "0.1.0",
+  "description": "Tokaroo provider plugin for OpenClaw.",
+  "providers": ["tokaroo"],
+  "providerAuthEnvVars": {
+    "tokaroo": ["TOKAROO_API_KEY"]
+  },
+  "providerAuthChoices": [
+    {
+      "provider": "tokaroo",
+      "method": "api-key",
+      "choiceId": "tokaroo-api-key",
+      "choiceLabel": "Tokaroo API key",
+      "choiceHint": "Get your API key from Tokaroo after activating API access.",
+      "groupId": "tokaroo",
+      "groupLabel": "Tokaroo",
+      "optionKey": "tokarooApiKey",
+      "cliFlag": "--tokaroo-api-key",
+      "cliOption": "--tokaroo-api-key <key>",
+      "cliDescription": "Tokaroo API key",
+      "onboardingScopes": ["text-inference"]
+    }
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false
+  }
+}
