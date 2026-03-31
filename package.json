@@ -11,10 +11,10 @@
   "homepage": "https://tokaroo.com/integrations/openclaw",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tokaroo-ai/openclaw-provider.git"
+    "url": "https://github.com/tokaroo-ai/tokaroo-openclaw-provider.git"
   },
   "bugs": {
-    "url": "https://github.com/tokaroo-ai/openclaw-provider/issues"
+    "url": "https://github.com/tokaroo-ai/tokaroo-openclaw-provider/issues"
   },
   "keywords": [
     "tokaroo",
