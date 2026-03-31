@@ -39,6 +39,7 @@ export const TOKAROO_PROVIDER_MODELS: ModelDefinitionConfig[] = [
 ];
 
 export const tokarooProvider = {
+  id: TOKAROO_PROVIDER_ID,
   label: "Tokaroo",
   docsPath: "https://tokaroo.com/integrations/openclaw",
   envVars: ["TOKAROO_API_KEY"],
