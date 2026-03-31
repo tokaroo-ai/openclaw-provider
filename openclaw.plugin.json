@@ -1,7 +1,7 @@
 {
   "id": "tokaroo",
   "enabledByDefault": true,
-  "name": "@tokaroo-ai/openclaw-provider",
+  "name": "tokaroo-openclaw-provider",
   "version": "0.1.0",
   "description": "Tokaroo provider plugin for OpenClaw.",
   "providers": ["tokaroo"],
