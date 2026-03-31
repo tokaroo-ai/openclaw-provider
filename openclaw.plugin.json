@@ -1,5 +1,6 @@
 {
   "id": "tokaroo",
+  "enabledByDefault": true,
   "name": "@tokaroo-ai/openclaw-provider",
   "version": "0.1.0",
   "description": "Tokaroo provider plugin for OpenClaw.",
@@ -16,6 +17,7 @@
       "choiceHint": "Get your API key from Tokaroo after activating API access.",
       "groupId": "tokaroo",
       "groupLabel": "Tokaroo",
+      "groupHint": "Managed multi-provider routing",
       "optionKey": "tokarooApiKey",
       "cliFlag": "--tokaroo-api-key",
       "cliOption": "--tokaroo-api-key <key>",

@@ -15,6 +15,18 @@ It packages the same managed Tokaroo setup used in the manual OpenClaw docs:
 - Registers Tokaroo as an OpenClaw provider.
 - Prompts for `TOKAROO_API_KEY`.
 - Adds the managed Tokaroo model catalog.
+- Applies Tokaroo as an OpenClaw provider/default-model preset during onboarding.
+
+## Local install
+
+```bash
+pnpm install
+pnpm build
+pnpm exec openclaw plugins install -l .
+pnpm exec openclaw plugins list
+```
+
+After linking, restart OpenClaw so the plugin is loaded in your normal session.
 
 ## Getting a key
 
@@ -32,8 +44,8 @@ pnpm build
 pnpm test
 ```
 
-## Planned follow-ups
+## Publish status
 
-- ClawHub publish metadata and release flow
-- Optional onboarding presets for setting Tokaroo as the default OpenClaw provider
-- Optional richer provider docs/help text inside OpenClaw
+- Plugin loads successfully in OpenClaw from a local linked path.
+- ClawHub publish still requires an authenticated `clawhub login`.
+- npm publish still requires npm auth if you want the package on npm in addition to ClawHub.

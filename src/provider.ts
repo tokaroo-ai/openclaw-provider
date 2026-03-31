@@ -1,6 +1,13 @@
 import type { SingleProviderPluginOptions } from "openclaw/plugin-sdk/provider-entry";
 import type { ModelDefinitionConfig } from "openclaw/plugin-sdk/provider-model-shared";
 
+import {
+  TOKAROO_BASE_URL,
+  TOKAROO_DEFAULT_MODEL_REF,
+  TOKAROO_PROVIDER_ID,
+} from "./constants.js";
+import { applyTokarooConfig } from "./onboard.js";
+
 export const TOKAROO_PROVIDER_MODELS: ModelDefinitionConfig[] = [
   {
     id: "auto",
@@ -39,18 +46,29 @@ export const tokarooProvider = {
     {
       methodId: "api-key",
       label: "Tokaroo API key",
-      hint: "Get your API key from tokaroo.com after activating API access.",
+      hint: "Managed multi-provider routing through one Tokaroo key.",
       optionKey: "tokarooApiKey",
       flagName: "--tokaroo-api-key",
       envVar: "TOKAROO_API_KEY",
       promptMessage: "Enter your Tokaroo API key from https://tokaroo.com/keys",
-      defaultModel: "tokaroo/auto",
+      defaultModel: TOKAROO_DEFAULT_MODEL_REF,
+      applyConfig: (cfg) => applyTokarooConfig(cfg),
+      noteTitle: "Tokaroo",
+      noteMessage: [
+        "Tokaroo routes across OpenAI, Anthropic, Google, and Groq through one key.",
+        "Activate API access at https://tokaroo.com/payments before creating your first key.",
+        "Docs: https://tokaroo.com/integrations/openclaw",
+      ].join("\n"),
+      wizard: {
+        groupLabel: "Tokaroo",
+        groupHint: "Managed multi-provider routing",
+      },
     },
   ],
   catalog: {
     buildProvider: () => ({
       api: "openai-completions",
-      baseUrl: "https://api.tokaroo.com/v1",
+      baseUrl: TOKAROO_BASE_URL,
       models: [...TOKAROO_PROVIDER_MODELS],
     }),
   },

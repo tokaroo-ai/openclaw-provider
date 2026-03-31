@@ -5,6 +5,9 @@
   "type": "module",
   "license": "MIT",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "homepage": "https://tokaroo.com/integrations/openclaw",
   "repository": {
     "type": "git",
