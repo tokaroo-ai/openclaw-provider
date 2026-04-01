@@ -44,9 +44,11 @@ pnpm build
 pnpm test
 ```
 
-## Publish status
+## Install from ClawHub
 
-- Plugin loads successfully in OpenClaw from a local linked path.
-- Preferred published install target: `clawhub:tokaroo-openclaw-provider`
-- ClawHub publish still requires an authenticated `clawhub login`.
-- npm publish still requires npm auth if you want the package on npm in addition to ClawHub.
+```bash
+openclaw plugins install clawhub:tokaroo-openclaw-provider
+openclaw plugins list
+```
+
+Restart OpenClaw after install so the provider is loaded in your normal session.
